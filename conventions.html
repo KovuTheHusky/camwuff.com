@@ -1,0 +1,61 @@
+---
+layout: page
+title: Conventions
+subtitle: "Timeline of convention attendance."
+permalink: /conventions
+redirect_from:
+  - /cons
+---
+<div class="conventions container text-center">
+  <h3>Up Next</h3>
+  <h5 id="countdown"><span id="days"></span> day<span id="plural">s</span></h5>
+  <p><a href="https://furryweekend.com">Furry Weekend Atlanta</a> &bull; May 5-8 &bull; Atlanta, Georgia</p>
+  <h3 class="gmt">Future</h3>
+  <h5>2022</h5>
+  <p><a href="https://goblfc.org">Biggest Little Fur Con</a> &bull; June 2-5 &bull; Reno, Nevada</p>
+  <p><a href="https://anthrocon.org">Anthrocon</a> &bull; June 30-July 3 &bull; Pittsburgh, Pennsylvania</p>
+  <p><a href="https://en.wikifur.com/wiki/LIFurs_OMGWTFBBQ">OMGWTFBBQ</a> &bull; TBA &bull; Kings Park, New York</p>
+  <p><a href="https://megaplexcon.org">Megaplex</a> &bull; August 5-7 &bull; Orlando, Florida</p>
+  <p><a href="https://denfur.org">DenFur</a> &bull; August 19-21 &bull; Denver, Colorado</p>
+  <p><a href="https://furrydelphia.org">Furrydelphia</a> &bull; August 26-28 &bull; Philadelphia, Pennsylvania</p>
+  <p><a href="https://furpocalypse.org">Furpocalypse</a> &bull; October 27-30 &bull; Stamford, Connecticut</p>
+  <p><a href="https://furfest.org">Midwest FurFest</a> &bull; December 1-4 &bull; Rosemont, Illinois</p>
+  <p><a href="https://newyearsfurryball.com">New Year's Furry Ball</a> &bull; December 31-January 1 &bull; Newark, Delaware</p>
+  <h3 class="gmt">Past</h3>
+  <h5>2022</h5>
+  <p><a href="https://motorcityfurrycon.org">Motor City Furry Con</a> &bull; March 25-27 &bull; Ypsilanti, Michigan</p>
+  <p><a href="https://furryfiesta.org">Furry Fiesta</a> &bull; March 17-20 &bull; Dallas, Texas</p>
+  <p><a href="https://blueridgefurfare.com">Blue Ridge Furfare</a> &bull; March 10-13 &bull; Asheville, North Carolina</p>
+  <p><a href="https://furthemore.org">Fur the 'More</a> &bull; March 4-6 &bull; Arlington, Virginia</p>
+  <p><a href="https://anthronewengland.com">Anthro New England</a> &bull; February 17-20 &bull; Boston, Massachusetts</p>
+  <p><a href="https://sincitymurrcon.com">Sin City Murr Con</a> &bull; February 4-6 &bull; Las Vegas, Nevada</p>
+  <h5>2021</h5>
+  <p><a href="https://newyearsfurryball.com">New Year's Furry Ball</a> &bull; December 31-January 1 &bull; Newark, Delaware</p>
+  <p><a href="https://furfest.org">Midwest FurFest</a> &bull; December 3-5 &bull; Rosemont, Illinois</p>
+  <p><a href="https://goblfc.org">Biggest Little Fur Con</a> &bull; October 21-24 &bull; Reno, Nevada</p>
+  <p><a href="https://motorcityfurrycon.org">Motor City Furry Con</a> &bull; October 8-10 &bull; Ypsilanti, Michigan</p>
+  <p><a href="https://furrydelphia.org">Furrydelphia</a> &bull; August 12-15 &bull; King of Prussia, Pennsylvania</p>
+  <p><a href="https://megaplexcon.org">Megaplex</a> &bull; August 6-8 &bull; Orlando, Florida</p>
+  <h5>2020</h5>
+  <p>&mdash;</p>
+  <h5>2019</h5>
+  <p>&mdash;</p>
+  <h5>2018</h5>
+  <p>&mdash;</p>
+  <h5>2017</h5>
+  <p><a href="https://furpocalypse.org">Furpocalypse</a> &bull; October 27-29 &bull; Cromwell, Connecticut</p>
+</div>
+<script>
+var convention = new Date("05/05/2022");
+var today = new Date();
+var difference = convention.getTime() - today.getTime();
+var days = Math.ceil(difference / (1000 * 3600 * 24));
+if (days > 0) {
+  $('#days').text(days);
+  if (days == 1) {
+    $('#plural').text('');
+  }
+} else {
+  $('#countdown').text('Now');
+}
+</script>

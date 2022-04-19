@@ -1,0 +1,21 @@
+title: camwuff
+description: "A personal website for camwuff."
+permalink: /post/:year/:month/:day/:title
+baseurl: ""
+url: "https://camwuff.com"
+twitter_username: camwuff
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-file-size
+  - jekyll-redirect-from
+
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+include: 
+  - .nojekyll
+  - _icons
+  - node_modules

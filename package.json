@@ -1,0 +1,16 @@
+{
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.1.3",
+    "clipboard": "^2.0.10",
+    "jquery": "^3.6.0",
+    "simple-icons": "^6.19.0",
+    "twemoji": "^14.0.2",
+    "twemoji-git": "twitter/twemoji"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KovuTheHusky/camwuff.com"
+  }
+}
