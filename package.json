@@ -4,7 +4,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "clipboard": "^2.0.11",
-    "jquery": "^3.6.2",
+    "jquery": "^3.6.3",
     "simple-icons": "^8.1.0",
     "twemoji": "^14.0.2",
     "twemoji-git": "twitter/twemoji"
