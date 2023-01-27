@@ -20,4 +20,4 @@ gem "wdm", "~> 0.1", :install_if => Gem.win_platform?
 
 gem "nokogiri", "~> 1.14"
 
-gem "webrick", "~> 1.7" # TODO: Remove this once jekyll releases https://github.com/hrldcpr/poole/commit/bafd481f3347283c2edabdb56ee4a3b4b655efc1
+gem "webrick", "~> 1.8" # TODO: Remove this once jekyll releases https://github.com/hrldcpr/poole/commit/bafd481f3347283c2edabdb56ee4a3b4b655efc1
