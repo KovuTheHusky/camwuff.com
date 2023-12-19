@@ -8,6 +8,7 @@ gem "jekyll-sass-converter", "~> 3.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
   gem "jekyll-file-size", "~> 0.0.7"
+  gem "jekyll-node-module"
   gem "jekyll-redirect-from", "~> 0.16.0"
 end
 
@@ -19,5 +20,4 @@ end
 gem "wdm", "~> 0.1", :install_if => Gem.win_platform?
 
 gem "nokogiri", "~> 1.15"
-
-gem "webrick", "~> 1.8" # TODO: Remove this once jekyll releases https://github.com/hrldcpr/poole/commit/bafd481f3347283c2edabdb56ee4a3b4b655efc1
+gem "webrick", "~> 1.8"
