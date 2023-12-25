@@ -18,8 +18,8 @@ dependencies:
     specifier: ^3.7.1
     version: 3.7.1
   simple-icons:
-    specifier: ^10.3.0
-    version: 10.3.0
+    specifier: ^10.4.0
+    version: 10.4.0
   twemoji:
     specifier: ^14.0.2
     version: 14.0.2
@@ -94,8 +94,8 @@ packages:
     resolution: {integrity: sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==}
     dev: false
 
-  /simple-icons@10.3.0:
-    resolution: {integrity: sha512-MpqALzcKXPNfVKiNkESkahmXIt0tTVnTOZAhD6q4MmL3XUroaKwy8stPwXZOfK1WoT6jqpjUfc0nopPePZvY7w==}
+  /simple-icons@10.4.0:
+    resolution: {integrity: sha512-XBoU1ljCsWjw59IVkaQ1nKc0PiaDAAKNFVx59ueC0tBy4WY/I4Q040sGj6ok2cZRLT8zBzL1HaTubi8MRqmojQ==}
     engines: {node: '>=0.12.18'}
     dev: false
 
