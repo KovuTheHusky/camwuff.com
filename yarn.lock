@@ -73,10 +73,10 @@ select@^1.1.2:
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
   integrity sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==
 
-simple-icons@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-11.0.0.tgz#ffa7a2ca4a42ea4ccac62ae1a2f5321fe8bffd96"
-  integrity sha512-n6z6fQwODmhRfy4RBkNmnP67yzqGUa/0ETJDkMX8Fl2riLSl1O8nB3qAl5Ij0oyEwgYC0WbMLXn1dkyYSTDs1w==
+simple-icons@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-11.1.0.tgz#4757b1dcaf7ef6bc26d1d2bddffde53ceedf1c39"
+  integrity sha512-1Z8ewYajktMgVGo7o85MepKUo7NEFLAvgDjftK3AmfN+bdCfIug8ncxew0TiQVFidR4JQ9whXB7uUiAmukAkPg==
 
 tiny-emitter@^2.0.0:
   version "2.1.0"
