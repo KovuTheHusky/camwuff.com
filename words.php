@@ -59,7 +59,8 @@ $contractions = [
     'im', 'youre', 'hes', 'shes', 'its', 'were', 'theyre', 'cant', 'dont', 'wont', 'shouldnt', 'wouldnt', 'couldnt',
     'isnt', 'arent', 'havent', 'hasnt', 'hadnt', 'wasnt', 'werent', 'id', 'youd', 'ive', 'youve', 'i', 'am', 'you',
     'are', 'he', 'is', 'she', 'it', 'we', 'they', 'cannot', 'do', 'not', 'will', 'should', 'would', 'could', 'have',
-    'has', 'had', 'was', 'were', 'didnt', 'did', 'ill', 'youll', 'hell', 'shell', 'shouldve', 'couldve', 'wouldve'
+    'has', 'had', 'was', 'were', 'didnt', 'did', 'ill', 'youll', 'hell', 'shell', 'shouldve', 'couldve', 'wouldve',
+    'doesnt'
 ];
 
 $custom = [
