@@ -1,0 +1,147 @@
+---
+permalink: /hurt/
+---
+<!doctype html>
+<html lang="en" style="height: 100%;" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="only dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <title>camwuff</title>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
+  <!-- <script src="/node_modules/d3/dist/d3.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+  <script src="/node_modules/d3-cloud/build/d3.layout.cloud.js"></script>
+  <script src="/node_modules/oscilloscope/dist/oscilloscope.min.js"></script>
+  <script src="/max.js"></script>
+  <script src="/words.js"></script>
+</head>
+<body>
+  <div id="dimmer"></div>
+  <div id="cloud"></div>
+  <div id="oscilloscope">
+    <canvas id="oscilloscope-canvas"></canvas>
+  </div>
+  <audio id="voicemail" loop>
+    <source src="/voicemail.m4a" type="audio/mp4">
+    <source src="/voicemail.ogg" type="audio/ogg">
+  </audio>
+  <div id="ui">
+    <button id="button" class="border-0 rounded-circle"><i class="fa-solid fa-heart-crack fa-2xl"></i></button>
+  </div>
+  <div id="help" class="me-3 mb-3">
+    <button id="button" class="border-0 rounded-circle" data-bs-toggle="modal" data-bs-target="#modal"><i class="fa-solid fa-question fa-2xl"></i></button>
+  </div>
+  <div id="modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>I loved you so much.</p>
+          <p>I've never been hurt like this.</p>
+          <p class="mb-0">I miss you, Cameron.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    function startCloud() {
+
+      const size = window.innerHeight < window.innerWidth ? window.innerHeight : window.innerWidth;
+      const maxFont = size / 5;
+      // const maxFont = (window.innerHeight + window.innerWidth) / 2 / 3;
+
+      //var fill = d3.scaleOrdinal(d3.schemeCategory20);
+      var fill = d3.scale.category20();
+
+      var layout = d3.layout.cloud()
+        .size([window.innerWidth, window.innerHeight])
+        .words(words.map(function (d) {
+          return { text: d[0], size: d[1] * d[1] };
+        }))
+        .padding(5)
+        .rotate(function () { return ~~(Math.random() * 4 - 2) * 90; })
+        .spiral("rectangular")
+        .font("Impact")
+        .fontSize(function (d) { return d.size / (max * max) * maxFont + 10; })
+        .on("end", draw);
+
+      layout.start();
+
+      function draw(words) {
+        d3.select("#cloud").append("svg")
+          .attr("width", layout.size()[0])
+          .attr("height", layout.size()[1])
+          .append("g")
+          .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+          .selectAll("text")
+          .data(words)
+          .enter().append("text")
+          .style("font-size", function (d) { return d.size + "px"; })
+          .style("font-family", "Impact")
+          .style("fill", function (d, i) { return fill(i); })
+          .attr("text-anchor", "middle")
+          .attr("transform", function (d) {
+            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+          })
+          .text(function (d) { return d.text; });
+      }
+
+    }
+
+    function startOscilloscope() {
+      var audioContext = new window.AudioContext();
+      var canvas = document.getElementById('oscilloscope-canvas');
+      var audioElement = document.getElementById('voicemail');
+      var source = audioContext.createMediaElementSource(audioElement);
+      var scope = new Oscilloscope(source);
+      source.connect(audioContext.destination);
+      const ctx = canvas.getContext('2d');
+      ctx.canvas.height = window.innerHeight;
+      ctx.canvas.width = window.innerWidth;
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = '#ffffff';
+      scope.animate(ctx);
+      audioElement.play();
+    }
+
+    $('#help').hide();
+    startCloud();
+
+    document.querySelector('#ui button').addEventListener('click', function () {
+      document.querySelector('#ui button').style.display = 'none';
+      $('#dimmer').fadeOut(1000);
+      $('#help').fadeIn(1000);
+      startOscilloscope();
+    })
+
+    var resize;
+    $(window).on("resize", function () {
+      clearTimeout(resize);
+      resize = setTimeout(resized, 100);
+    });
+
+    function resized() {
+      const ctx = document.getElementById('oscilloscope-canvas').getContext('2d');
+      ctx.canvas.height = window.innerHeight;
+      ctx.canvas.width = window.innerWidth;
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = '#ffffff';
+      $('#cloud').empty();
+      startCloud();
+    }
+  </script>
+</body>
+</html>

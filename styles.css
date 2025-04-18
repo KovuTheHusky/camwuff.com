@@ -27,7 +27,7 @@ body {
   z-index: 3;
 }
 
-#ui button {
+#ui button, #ui a {
   width: 100px;
   height: 100px;
   animation: super-rainbow 15s infinite alternate linear;
