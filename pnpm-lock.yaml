@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fortawesome/fontawesome-free':
-        specifier: ^7.0.1
-        version: 7.0.1
+        specifier: ^7.1.0
+        version: 7.1.0
       '@popperjs/core':
         specifier: ^2.11.8
         version: 2.11.8
@@ -32,8 +32,8 @@ importers:
 
 packages:
 
-  '@fortawesome/fontawesome-free@7.0.1':
-    resolution: {integrity: sha512-RLmb9U6H2rJDnGxEqXxzy7ANPrQz7WK2/eTjdZqyU9uRU5W+FkAec9uU5gTYzFBH7aoXIw2WTJSCJR4KPlReQw==}
+  '@fortawesome/fontawesome-free@7.1.0':
+    resolution: {integrity: sha512-+WxNld5ZCJHvPQCr/GnzCTVREyStrAJjisUPtUxG5ngDA8TMlPnKp6dddlTpai4+1GNmltAeuk1hJEkBohwZYA==}
     engines: {node: '>=6'}
 
   '@popperjs/core@2.11.8':
@@ -209,7 +209,7 @@ packages:
 
 snapshots:
 
-  '@fortawesome/fontawesome-free@7.0.1': {}
+  '@fortawesome/fontawesome-free@7.1.0': {}
 
   '@popperjs/core@2.11.8': {}
 
